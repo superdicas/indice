@@ -37,6 +37,7 @@
       </nav>
     </div>
   </header>
+<!-->
   <main class="container">
       <section class="card hero">
       <div>
@@ -56,6 +57,7 @@
       © 2026 — Manuais e guias rápidos
     </footer>
   </main>
+  -->
 </body>
 </html>
 
