@@ -3,146 +3,149 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>NFe — Importado</title>
-
-  <!-- Estilo inspirado no modelo indicado (simples, limpo, com índice à esquerda) -->
+  <title>Guia de download do XML no site da Nota Fiscal Eletrônica</title>
   <style>
-    :root{
-      --bg:#f6f7fb;
-      --card:#ffffff;
-      --accent:#0b76ef;
-      --muted:#666;
-      --maxw:1100px;
-      --sidebar-w:260px;
-      --gap:18px;
-      --radius:8px;
-      --text:#222;
-      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+    :root {
+      --bg: #f7f7f9;
+      --card: #fff;
+      --accent: #0b76ef;
+      --text: #222
     }
 
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
-    a{color:var(--accent);text-decoration:none}
-    a:hover{text-decoration:underline}
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", sans-serif;
+      background: var(--bg);
+      color: var(--text)
+    }
 
-    .wrap{max-width:var(--maxw);margin:28px auto;padding:18px;display:flex;gap:var(--gap)}
-    /* sidebar */
-    .sidebar{width:var(--sidebar-w);position:sticky;top:24px;align-self:flex-start}
-    .card{background:var(--card);padding:14px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(20,20,30,0.05)}
-    .logo{display:flex;align-items:center;gap:10px;margin-bottom:12px}
-    .logo img{width:44px;height:44px;object-fit:cover;border-radius:6px}
-    .logo .title{font-weight:700}
-    .toc{margin:8px 0;padding:6px 0}
-    .toc a{display:block;padding:6px 8px;border-radius:6px;color:var(--text);font-size:0.95rem}
-    .toc a:hover{background:#f0f6ff;color:var(--accent)}
-    /* main content */
-    main{flex:1}
-    header.main-hero{margin-bottom:14px}
-    .hero-title{font-size:1.35rem;margin:0 0 6px 0}
-    .meta{color:var(--muted);font-size:0.92rem;margin-bottom:14px}
-    article.content .section{margin-bottom:18px}
-    h2{margin:0 0 8px 0;font-size:1.05rem}
-    p{margin:0 0 10px 0;line-height:1.5}
-    pre, code{font-family:var(--mono);font-size:0.92rem;background:#0f1724;color:#e6eef8;padding:8px;border-radius:6px;overflow:auto}
-    pre{padding:12px}
-    img.responsive{max-width:100%;height:auto;border-radius:6px;margin-top:8px}
-    .note{background:#fff8e6;border-left:4px solid #ffb74d;padding:10px;border-radius:6px}
-    footer{color:var(--muted);font-size:0.9rem;margin-top:18px;text-align:center}
-    /* responsive */
-    @media (max-width:920px){
-      .wrap{padding:12px;flex-direction:column}
-      .sidebar{width:100%;position:static;order:2}
+    header {
+      background: var(--accent);
+      color: #fff;
+      padding: 18px 20px
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 28px auto;
+      padding: 0 16px
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 14px;
+      font-weight: 600
+    }
+
+    .card {
+      background: var(--card);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 6px 18px rgba(20, 20, 30, 0.06)
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      gap: 18px
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: 1.6rem
+    }
+
+    .links a {
+      display: inline-block;
+      margin-right: 10px;
+      padding: 8px 12px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none
+    }
+
+    img.responsive {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+      margin-top: 12px
+    }
+
+    footer {
+      color: #666;
+      font-size: 0.9rem;
+      margin: 24px 0;
+      text-align: center
     }
   </style>
 </head>
+
 <body>
-  <div class="wrap">
-    <!-- Sidebar / Índice -->
-    <aside class="sidebar">
-      <div class="card">
-        <div class="logo">
-          <img src="images/dicas.jpg" alt="Logo (substitua se quiser)">
-          <div>
-            <div class="title">NFe — Importado</div>
-            <div style="font-size:0.85rem;color:var(--muted)">Fonte: telegra.ph</div>
-          </div>
-        </div>
-
-        <nav class="toc" aria-label="Índice">
-          <strong style="display:block;margin-bottom:6px">Índice</strong>
-          <a href="#intro">Introdução</a>
-          <a href="#conteudo-principal">Conteúdo principal</a>
-          <a href="#exemplos">Exemplos</a>
-          <a href="#conclusao">Conclusão</a>
-        </nav>
-
-        <div style="margin-top:12px;font-size:0.9rem;color:var(--muted)">
-          <div><strong>Arquivo:</strong> telegraph-nfe-05-02.html</div>
-          <div style="margin-top:8px"><a href="home.html">Voltar ao Início</a></div>
+  <header>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between">
+      <div style="display:flex;align-items:center;gap:12px">
+        <img src="images/dicas.jpg" alt="Logo" style="width:60px;height:60px;border-radius:6px;object-fit:cover">
+        <div>
+          <div style="font-weight:700">Guia de download do XML no site da Nota Fiscal Eletrônica
+            </div>
+          <div style="font-size:0.85rem;opacity:0.95">Guia rápido</div>
         </div>
       </div>
-    </aside>
-
-    <!-- Main -->
-    <main>
-      <header class="main-hero card" style="margin-bottom:12px">
-        <h1 class="hero-title">NFe — Conteúdo importado</h1>
-        <div class="meta">Importado de: <a href="https://telegra.ph/nfe-05-02" target="_blank" rel="noopener">telegra.ph/nfe-05-02</a> — Estilo baseado em superdicas.github.io</div>
-      </header>
-
-      <article class="content card" id="conteudo">
-        <!-- Seção: introdução -->
-        <section id="intro" class="section">
-          <h2>Introdução</h2>
-          <p>Conteúdo importado conforme solicitado. Edite títulos, parágrafos e imagens conforme necessário. As imagens originais podem referenciar URLs externas; é recomendado baixar as imagens para a pasta <code>images/</code> e atualizar os <code>src</code>.</p>
+      <nav>
+        <a href="home.html">Voltar ao início</a>
+        <!-- <a href="about.html">Sobre</a> -->
+        <a href="contato.html">Contato</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <section class="card hero">
+      <div>
+        <p style="margin-top:8px">
+        <p>Com as recentes alterações na legislação, o download dos arquivos XML para processamento de entradas de notas fiscais só será permitido com o uso do certificado digital.<br><br>
+          <b>Este guia tem o objetivo de lhe orientar no processo de download do arquivo XML.</b><br><br>
+          Para acessar o site da Nota Fiscal Eletrônica, abra o navegador do seu PC e digite o endereço abaixo:</p>
+          
+          <h3><a href="https://www.nfe.fazenda.gov.br/portal/consultaRecaptcha.aspx?tipoConsulta" target="_blank" rel="noopener">Clique aqui para acessar o site da Sefaz</a></h3>
+        <p></p>
+        <img src="images/imagem-downxmlnfe01.png" alt="Descrição" style="max-width:100%;height:auto;">
+        <section class="especial">
+          <h5><i>Ao abrir o site da NF-e:<br> 
+          1º informe a chave da nota;<br> 
+          2º marque o reCAPTCHA Não sou um robô;<br> 
+          3º clique em continuar.</i></h5><br><br>
         </section>
+        <img src="images/imagem-downxmlnfe02.png" alt="imagem-fns02" style="max-width:100%;height:auto;">
+          <h5><i>Ao clicar em "Continuar", caso você veja essa mensagem acima, é porque essa nota não está disponível na base nacional e será necessário que seu fornecedor (o emitente da nota) envie o arquivo XML por e-mail.</i><h5><br><br>
+        <img src="images/imagem-downxmlnfe03.png" alt="imagem-fns03" style="max-width:100%;height:auto;">
+        <h5><i>Logo você verá as informações da Nota Fiscal<br>
+          1º cliquem em "Download do documento*";<br> 
+          2º confirme a mensagem do certificado;<br> 
+          3º seu arquivo será baixado normalmente.</h5><br><br>
+          <b>Agora você já pode voltar ao sistema e realizar a entrada da nota fiscal como de costume.<br> Lembre-se de que o arquivo XML é essencial para o processamento correto da entrada da nota fiscal.</b><br><br>
+          Para baixar outra NF-e, clique no botão <b>"Nova Consulta"</b> e repita o processo.</i><br><br>  
+      </div>
+      <!--
+      <div style="flex:1;text-align:right">
+        <img src="images/imagem-fns01.png" alt="Exemplo" class="responsive" style="max-width:220px;margin-left:auto">
+      </div>
+      -->
+    </section>
 
-        <!-- Seção: conteúdo principal (substitua pelo conteúdo real da página telegra.ph) -->
-        <section id="conteudo-principal" class="section">
-          <h2>Conteúdo principal</h2>
+    <section class="card" style="margin-top:18px">
+      <p>
+      <div class="links" style="margin-top:12px">
+        <a href="home.html">Voltar ao início</a>
+        <a href="contato.html">Fale comigo</a>
+      </div>
+      </p>
+    </section>
 
-          <!-- Exemplo de parágrafos importados -->
-          <p><strong>Nota:</strong> Abaixo cole/coletei o conteúdo textual extraído da URL. Substitua este texto pelo conteúdo real importado da página telegra.ph/nfe-05-02.</p>
-
-          <p>Exemplo de parágrafo 1 do conteúdo original. Aqui vão as informações principais sobre o tópico tratado na página importada. Se a página possuir listas, imagens ou trechos em destaque, coloque-os conforme os blocos abaixo.</p>
-
-          <p>Exemplo de parágrafo 2. Continue trazendo o texto original entre parágrafos <code>&lt;p&gt;</code> e use <code>&lt;h3&gt;</code> para subtítulos quando necessário.</p>
-
-          <!-- Imagem de exemplo -->
-          <img src="images/print-exemplo.jpg" alt="Print exemplo — substitua pelo arquivo real" class="responsive">
-
-        </section>
-
-        <!-- Seção: exemplos / código -->
-        <section id="exemplos" class="section">
-          <h2>Exemplos e trechos</h2>
-
-          <p>Se a página original contiver blocos de código, use <code>&lt;pre&gt;</code> e <code>&lt;code&gt;</code> para preservar formatação:</p>
-
-          <pre><code>&lt;!-- Exemplo de bloco de código --&gt;
-function exemplo() {
-  console.log('Olá');
-}
-</code></pre>
-
-          <p>Para links dentro do documento, use anchors com ids correspondentes (já presente no índice).</p>
-        </section>
-
-        <!-- Seção: conclusão -->
-        <section id="conclusao" class="section">
-          <h2>Conclusão</h2>
-          <p>Revise imagens e estilos após colar o conteúdo real. Quando as imagens forem grandes, armazene em <code>images/</code> e atualize os caminhos. Depois faça commit e push para que o GitHub Pages publique a página.</p>
-
-          <div class="note">
-            <strong>Dica:</strong> para baixar automaticamente as imagens referenciadas no HTML, abra o arquivo no navegador, copie as URLs das imagens e baixe com <code>curl -L -o images/nome.jpg "URL-da-imagem"</code>.
-          </div>
-        </section>
-
-        <footer style="margin-top:12px">
-          <small>Arquivo gerado: telegraph-nfe-05-02.html — ajuste conteúdo e imagens conforme preciso.</small>
-        </footer>
-      </article>
-    </main>
-  </div>
+    <footer>
+      © 2026 — Manuais e guias rápidos
+    </footer>
+  </main>
 </body>
 </html>
