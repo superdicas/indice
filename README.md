@@ -1,5 +1,5 @@
 # indice
 Lista dos guias e manuais disponíveis.
 
-Como consultar pagamentos da Farmácia Popular Fundo Nacional de Saúde - FNS 
-https://superdicas.github.io/indice/fns.html
+<a href="https://superdicas.github.io/indice/fns.html">Como consultar pagamentos da Farmácia Popular Fundo Nacional de Saúde - FNS</a>
+
