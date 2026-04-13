@@ -31,7 +31,7 @@
         </div>
       </div>
       <nav>
-        <a href="index.html">Início</a>
+        <a href="home.html">Início</a>
         <!--<a href="about.html">Sobre</a>-->
         <a href="contato.html">Contato</a>
       </nav>
@@ -47,7 +47,7 @@
     <section class="card" style="margin-top:18px">
       <p>
         <div class="links" style="margin-top:12px">
-          <a href="index.html">Ir para o início</a>
+          <a href="home.html">Ir para o início</a>
           <a href="contato.html">Fale comigo</a>
         </div>
       </p>
