@@ -38,15 +38,14 @@
   <main class="container">
       <section class="card hero">
       <div>
-      Lista dos guias e manuais disponíveis.<br><br>
+      <h1>Lista dos guias e manuais disponíveis.<br><br></h1>
       <a href="https://superdicas.github.io/indice/fns.html">Como consultar pagamentos da Farmácia Popular Fundo Nacional de Saúde - FNS</a>
-        <h1>Guia de consulta de pagamentos da Farmácia Popular</h1>
       </div>
     </section>
     <section class="card" style="margin-top:18px">
       <p>
         <div class="links" style="margin-top:12px">
-          <a href="index.html">Ir para Início</a>
+          <a href="index.html">Ir para o início</a>
           <a href="contact.html">Fale comigo</a>
         </div>
       </p>
