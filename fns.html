@@ -84,7 +84,9 @@
 </head>
 
 <body>
-  <header>
+    <div id="site-header"></div>
+
+  <!-- <header>
     <div class="container" style="display:flex;align-items:center;justify-content:space-between">
       <div style="display:flex;align-items:center;gap:12px">
         <img src="images/dicas.jpg" alt="Logo" style="width:60px;height:60px;border-radius:6px;object-fit:cover">
@@ -96,11 +98,10 @@
       </div>
       <nav>
         <a href="home.html">Voltar ao início</a>
-        <!-- <a href="about.html">Sobre</a> -->
         <a href="contato.html">Contato</a>
       </nav>
     </div>
-  </header>
+  </header> -->
   <main class="container">
     <section class="card hero">
       <div>
@@ -188,10 +189,28 @@
       </p>
     </section>
 
-    <footer>
+    <!--<footer>
       © 2026 — Manuais e guias rápidos
-    </footer>
+    </footer> -->
   </main>
+    <div id="site-footer"></div>
+
+  <script>
+    async function includeHTML(elSelector, url){
+      const target = document.querySelector(elSelector);
+      if (!target) return;
+      try {
+        const res = await fetch(url);
+        if (!res.ok) { target.innerHTML = ''; return; }
+        target.innerHTML = await res.text();
+      } catch(e){
+        console.error('includeHTML error', e);
+      }
+    }
+    // use caminhos absolutos para evitar problemas com subpastas
+    includeHTML('#site-header','/header.html');
+    includeHTML('#site-footer','/footer.html');
+  </script>
 </body>
 
 </html>
