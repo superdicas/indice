@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Manuais e guias rápidos</title>
+  <title>titulo da janela</title>
   <style>
     :root {
       --bg: #f7f7f9;
@@ -84,18 +84,19 @@
 </head>
 
 <body>
+    <div id="site-header"></div>
+
   <header>
     <div class="container" style="display:flex;align-items:center;justify-content:space-between">
       <div style="display:flex;align-items:center;gap:12px">
         <img src="images/dicas.jpg" alt="Logo" style="width:60px;height:60px;border-radius:6px;object-fit:cover">
         <div>
-          <div style="font-weight:700">Lista dos guias e manuais disponíveis</div>
+          <div style="font-weight:700">Nome no alto da página</div>
           <div style="font-size:0.85rem;opacity:0.95">Guia rápido</div>
         </div>
       </div>
       <nav>
         <a href="home.html">Voltar ao início</a>
-        <!-- <a href="about.html">Sobre</a> -->
         <a href="contato.html">Contato</a>
       </nav>
     </div>
@@ -103,25 +104,58 @@
   <main class="container">
     <section class="card hero">
       <div>
-        <h1>Lista dos guias e manuais disponíveis.<br><br></h1>
-        <a href="https://superdicas.github.io/indice/fns.html">Consultar pagamentos da Farmácia Popular Fundo
-          Nacional de Saúde - FNS</a><br><br>
-        <a href="https://superdicas.github.io/indice/downxmlnfe.html">Download do XML da Nota Fiscal Eletrônica</a><br><br>
-        <a href="https://superdicas.github.io/indice/atuprecos.html">Guia de atualização de preços com o arquivo Datarey</a><br><br>
+        <p style="margin-top:8px">
+        <p>Texto da página</p>
+        <p><a href="https://superdicas.github.io/indice/home.html">link de referência externa, quando for o caso</a></p>
+        <p>Demais textos da página</p>
+        <p></p>
+        <p></p>
+        <p><br><br>Caso prefira, pode ver nas imagens abaixo como é o processo descrito acima.<br><br></p>
+        <p></p>
+        <img src="images/imagem-modelo.png" alt="Descrição" style="max-width:100%;height:auto;">
+        <section class="especial">
+          <h5><i>Texto da legenda da imagem</i></h5><br><br>
+        </section>
       </div>
     </section>
+
+    <section class="card" style="margin-top:18px">
+      <h2>Aqui o título de uma nova seção destacada</h2>
+      <p>Aqui o texto de uma nova seção destacada
+      </p>
+    </section>
+
     <section class="card" style="margin-top:18px">
       <p>
       <div class="links" style="margin-top:12px">
-        <!-- <a href="home.html">Voltar ao início</a> -->
+        <a href="home.html">Voltar ao início</a>
         <a href="contato.html">Fale comigo</a>
       </div>
       </p>
     </section>
+
     <footer>
       © 2026 — Manuais e guias rápidos
     </footer>
   </main>
+    <div id="site-footer"></div>
+
+  <script>
+    async function includeHTML(elSelector, url){
+      const target = document.querySelector(elSelector);
+      if (!target) return;
+      try {
+        const res = await fetch(url);
+        if (!res.ok) { target.innerHTML = ''; return; }
+        target.innerHTML = await res.text();
+      } catch(e){
+        console.error('includeHTML error', e);
+      }
+    }
+    // use caminhos absolutos para evitar problemas com subpastas
+    includeHTML('#site-header','/header.html');
+    includeHTML('#site-footer','/footer.html');
+  </script>
 </body>
 
 </html>
