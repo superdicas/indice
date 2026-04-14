@@ -49,9 +49,9 @@
         mount.innerHTML = '<!-- include error -->';
         console.error('Include error', url, err);
       });
-    })('#site-header','/header.html');
+    })('#site-header','header.html');
 
-    (function(){ includeHTML('#site-footer','/footer.html'); })();
+    (function(){ includeHTML('#site-footer','footer.html'); })();
   </script>
 </body>
 </html>
