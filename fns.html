@@ -4,7 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Como consultar pagamentos da Farmácia Popular no Fundo Nacional de Saúde - FNS </title>
+  <script src="components/header.js" defer></script>
+  <script src="components/footer.js" type="text/javascript" defer></script>
+  <title>Guia de consulta de pagamentos da Farmácia Popular no Fundo Nacional de Saúde - FNS</title>
   <style>
     :root {
       --bg: #f7f7f9;
@@ -84,48 +86,27 @@
 </head>
 
 <body>
-    <div id="site-header"></div>
-
-  <header>
-    <div class="container" style="display:flex;align-items:center;justify-content:space-between">
-      <div style="display:flex;align-items:center;gap:12px">
-        <img src="images/dicas.jpg" alt="Logo" style="width:60px;height:60px;border-radius:6px;object-fit:cover">
-        <div>
-          <div style="font-weight:700">Guia de consulta de pagamentos da Farmácia Popular
-            </div>
-          <div style="font-size:0.85rem;opacity:0.95">Guia rápido</div>
-        </div>
-      </div>
-      <nav>
-        <a href="home.html">Voltar ao início</a>
-        <a href="contato.html">Contato</a>
-      </nav>
-    </div>
-  </header>
+        <header-component></header-component>
   <main class="container">
     <section class="card hero">
       <div>
+      <h2>Guia de consulta de pagamentos da Farmácia Popular no Fundo Nacional de Saúde - FNS</h2>
         <p style="margin-top:8px">
-        <p>Para consultar os pagamentos das vendas de Farmácia Popular acesse o link do Fundo Nacional de Saúde abaixo e
-        siga as instruções a seguir:</p>
-        <p></p>
+        Para consultar os pagamentos das vendas de Farmácia Popular acesse o link do Fundo Nacional de Saúde abaixo e
+        siga as instruções a seguir:
         <p><a href="https://consultafns.saude.gov.br/#/detalhada">link: FNS - Consulta detalhada</a></p>
-        <p></p>
-        <p>Ao acessar os site do FNS no link acima e informe os seguintes dados:</p>
-        <p>- <b>*Ano</b>;</p>
-        <p>- <b>Mês</b> em que o pagamento foi efetuado;</p>
-        <p>- <b>*Tipo de consulta</b>: Outros Pagamentos;</p>
-        <p>- <b>CNPJ</b> (somente números);</p>
-        <p>- Clique no botão consultar;</p>
-        <p>- Caso haja pagamento no mês selecionado, os dados da sua empresa serão exibidos no quadro de baixo. Clique
-          no botão de visualização (parece um olho);</p>
-        <p>- Logo abaixo você verá os valores pagos no mês selecionado.</p>
-        <p>Se desejar pesquisar pagamentos de outros meses, basta clicar no botão <b>"Voltar"</b> dentro da própria
-          página, à direita no alto.</p>
-        <p></p>
-        <p></p>
-        <p><br><br>Caso prefira, pode ver nas imagens abaixo como é o processo descrito acima.<br><br></p>
-        <p></p>
+        Ao acessar os site do FNS no link acima e informe os seguintes dados:<br>
+        - <b>*Ano</b>;<br>
+        - <b>Mês</b> em que o pagamento foi efetuado;<br>
+        - <b>*Tipo de consulta</b>: Outros Pagamentos;<br>
+        - <b>CNPJ</b> (somente números);<br>
+        - Clique no botão consultar;<br>
+        - Caso haja pagamento no mês selecionado, os dados da sua empresa serão exibidos no quadro de baixo. Clique
+          no botão de visualização (parece um olho);<br>
+        - Logo abaixo você verá os valores pagos no mês selecionado.<br>
+        Se desejar pesquisar pagamentos de outros meses, basta clicar no botão <b>"Voltar"</b> dentro da própria
+          página, à direita no alto.<br>
+        <br>Caso prefira, pode ver nas imagens abaixo como é o processo descrito acima.<br><br>
         <img src="images/imagem-fns01.png" alt="Descrição" style="max-width:100%;height:auto;">
         <section class="especial">
           <h5><i>Informe os seguintes dados: *Ano; Mês em que o pagamento foi efetuado; *Tipo de consulta: Outros
@@ -138,16 +119,11 @@
         <h5><i>Logo abaixo você verá os valores pagos no mês selecionado.<br>Se desejar pesquisar pagamentos de outros meses, basta clicar no botão Voltar dentro da própria página, à
           direita no alto.</i></h5><br><br>
       </div>
-      <!--
-      <div style="flex:1;text-align:right">
-        <img src="images/imagem-fns01.png" alt="Exemplo" class="responsive" style="max-width:220px;margin-left:auto">
-      </div>
-      -->
     </section>
 
     <section class="card" style="margin-top:18px">
       <h2>O que diz a lei sobre os pagamentos:</h2>
-      <p>"Os pagamentos do Programa Aqui Tem Farmácia Popular são realizados por competência mensal, considerando-se do
+      "Os pagamentos do Programa Aqui Tem Farmácia Popular são realizados por competência mensal, considerando-se do
         1º ao último dia do mês, e devem ser efetivados pelo Fundo Nacional de Saúde até o último dia do mês subsequente
         às vendas.<br><br>
         Os valores repassados estão disponíveis para consulta no site do <a
@@ -161,56 +137,29 @@
         Parágrafo único. Caso as farmácias e drogarias verifiquem possíveis divergências nos valores de repasse do
         Ministério da Saúde, deverão solicitar análise do pagamento ao DAF/SCTIE/MS, no prazo máximo de 90 (noventa)
         dias, a contar da data da ordem bancária de pagamento, indicando quais autorizações estão divergentes”.
-      </p>
     </section>
 
     <section class="card" style="margin-top:18px">
       <h2>O que ocorre na pática:</h2>
-      <p>Como no exemplo das imagens acima, os pagamentos efetuados em <b>Março</b>, são referentes às vendas de
-        <b>Janeiro</b>.</p>
+      Como no exemplo das imagens acima, os pagamentos efetuados em <b>Março</b>, são referentes às vendas de
+        <b>Janeiro</b>.<br><br>
 
-      <p>Caso o mês de referência de pagamento fosse <b>Junho</b>, as seria referente às vendas de <b>Abril</b>.</p>
+      Caso o mês de referência de pagamento fosse <b>Junho</b>, as seria referente às vendas de <b>Abril</b>.<br><br>
 
-      <p>É assim que funciona. Os pagamentos são autorizados no mês subsequente às vendas e pagos no mês seguinte.</p>
+      É assim que funciona. Os pagamentos são autorizados no mês subsequente às vendas e pagos no mês seguinte.<br><br>
 
-      <p><b>Ex.:</b> Vendeu em Abril; o pagamento foi autorizado em Maio; o numerário foi creditado na conta em Junho.
-      </p>
-
-      </p>
+      <b>Ex.:</b> Vendeu em Abril; o pagamento foi autorizado em Maio; o numerário foi creditado na conta em Junho.<br><br>
     </section>
 
 
     <section class="card" style="margin-top:18px">
       <p>
       <div class="links" style="margin-top:12px">
-        <a href="home.html">Voltar ao início</a>
-        <a href="contato.html">Fale comigo</a>
+              <footer-component></footer-component>
       </div>
       </p>
     </section>
-
-    <footer>
-      © 2026 — Manuais e guias rápidos
-    </footer>
   </main>
-    <div id="site-footer"></div>
-
-  <script>
-    async function includeHTML(elSelector, url){
-      const target = document.querySelector(elSelector);
-      if (!target) return;
-      try {
-        const res = await fetch(url);
-        if (!res.ok) { target.innerHTML = ''; return; }
-        target.innerHTML = await res.text();
-      } catch(e){
-        console.error('includeHTML error', e);
-      }
-    }
-    // use caminhos absolutos para evitar problemas com subpastas
-    includeHTML('#site-header','/header.html');
-    includeHTML('#site-footer','/footer.html');
-  </script>
 </body>
 
 </html>
